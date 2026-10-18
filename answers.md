@@ -57,5 +57,54 @@
 #### **node_modules/:** **/node_modules/
 #### **any file ending in .env:** *.env
 
+<br>
 
+# PART 2
+## Exercise 2.2.6
+#### We commit two files of feature-a and feature-b together and feature-c seperately because feature -c might be a different feature from feature-a and feature-b. When we work on same type of features we commit the files with same type of features under one commit and other files with other features with other, this help us distinguish between files through meaningful comments. I would do this when I want to distinguish between different purpose files.
+## Exercise 2.3.6
+#### If I make a local commit without getting the pull, then I can create unwanted conflicts because the repository might have been updated and I work and on the older version repositories. I might be supposed to work on the newer and updated verison of project and I am working on the older local version.
 
+# PART 3
+## Exercise 3.1.9
+#### It was a merge commit becuase it merged two branches with different histories.
+
+## Exercise 3.2.15
+
+- #### This happened because we were trying to merge two branches and both branches worked on same file and same line on that file but both branches had different content on that line, that's why on merge we had conflict.
+- #### No, there would have been no conflict if bith branches worked on seperate different lines.
+- #### If one branch works on about.md and other on team.txt then there would have been no conflict of both edited and added in other lines, there would have been conflict if: brach 1 have 3 lines on teams.txt and branch 2 edits team.txt line 2 then there would be conflict on merge.
+
+# PART 4
+## 13 
+- #### A pull request lets the team review and test changes before integration. Direct merging is skipped to avoid breaking production code with hidden bugs.
+- #### 1. Code correctness: Ensure the logic actually works and contains no security flaws.
+- #### 2. Code style: Check that it follows project formatting guidelines and readability standards.
+- #### A merge commit creates a new history-combining node when branches have diverged. A fast-forward merge simply slides the branch pointer forward without creating a new node.
+
+# PART 5
+## SCENARIO A
+#### There will be no conflict because both are working on different lines and git will merge both lines.
+
+## SCENARIO B
+#### There will be no conflict because both are working on different files and git will merge both files into main.
+
+## SCENARIO C
+#### Yes, there will be a conflict because both developers modified the exact same line.
+#### <<<<<<< HEAD
+#### DEBUG = True
+#### =======
+#### DEBUG = False
+#### >>>>>>> dev-b
+
+## SCENARIO D
+### Following are the exaact steps:
+#### Step 1: Open index.html in your code editor. Locate the conflict markers (<<<<<<<, =======, >>>>>>>), delete the markers, and keep the correct code block. Save the file.
+
+#### Step 2: Run the following command to tell Git the conflict has been resolved: git add index.html
+
+#### Step 4: Finally run this command : git commit -m "Resolve merge conflict in index.html"
+
+## SCENARIO E
+#### Yes, this is a good practice because it downloads the newest team changes to your computer so you do not use old code.
+#### If you skip it, you will write code on top of outdated files and face difficult merge conflicts when you upload later.
